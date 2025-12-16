@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Friends - Izaz’s Personal Website</title>
+  <style>
+  .exp-img {
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  .exp-img:hover {
+    transform: scale(1.08) translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+    filter: brightness(1.05);
+  }
+  .exp-img:active {
+    transform: scale(0.97);
+  }
+
+  /* ===== FRIENDS AUTO SLIDER (UPGRADED) ===== */
+
+.friend-slider {
+  position: relative;
+  width: 100%;
+  height: 430px;              /* tinggi gambar */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,.18);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* glow + slight lift bila hover */
+.friend-slider:hover {
+  box-shadow: 0 0 18px rgba(74,20,140,0.45);
+  transform: translateY(-2px);
+}
+
+/* gambar dalam slider */
+.friend-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  filter: blur(0px);
+  transition: opacity 1.4s ease-in-out, filter 0.6s ease-in-out;
+  animation-play-state: running;
+}
+
+/* hover pause – berhenti slide bila mouse atas */
+.friend-slider:hover img {
+  animation-play-state: paused;
+}
+
+/* ---------- FRIEND 1 (12s cycle) ---------- */
+.f1 img:nth-child(1) { animation: f1Slide 12s infinite; }
+.f1 img:nth-child(2) { animation: f1Slide 12s infinite 4s; }
+.f1 img:nth-child(3) { animation: f1Slide 12s infinite 8s; }
+
+@keyframes f1Slide {
+  0%   { opacity: 0;   filter: blur(2px); }
+  8%   { opacity: 1;   filter: blur(1px); }
+  18%  { opacity: 1;   filter: blur(0px); }
+  28%  { opacity: 1;   filter: blur(0px); }
+  32%  { opacity: 0.4; filter: blur(1.5px); }
+  40%  { opacity: 0;   filter: blur(2px); }
+  100% { opacity: 0;   filter: blur(2px); }
+}
+
+/* ---------- FRIEND 2 (15s cycle) ---------- */
+.f2 img:nth-child(1) { animation: f2Slide 15s infinite; }
+.f2 img:nth-child(2) { animation: f2Slide 15s infinite 5s; }
+.f2 img:nth-child(3) { animation: f2Slide 15s infinite 10s; }
+
+@keyframes f2Slide {
+  0%   { opacity: 0;   filter: blur(2px); }
+  8%   { opacity: 1;   filter: blur(1px); }
+  18%  { opacity: 1;   filter: blur(0px); }
+  28%  { opacity: 1;   filter: blur(0px); }
+  32%  { opacity: 0.4; filter: blur(1.5px); }
+  40%  { opacity: 0;   filter: blur(2px); }
+  100% { opacity: 0;   filter: blur(2px); }
+}
+
+/* ---------- FRIEND 3 (18s cycle) ---------- */
+.f3 img:nth-child(1) { animation: f3Slide 18s infinite; }
+.f3 img:nth-child(2) { animation: f3Slide 18s infinite 6s; }
+.f3 img:nth-child(3) { animation: f3Slide 18s infinite 12s; }
+
+@keyframes f3Slide {
+  0%   { opacity: 0;   filter: blur(2px); }
+  8%   { opacity: 1;   filter: blur(1px); }
+  18%  { opacity: 1;   filter: blur(0px); }
+  28%  { opacity: 1;   filter: blur(0px); }
+  32%  { opacity: 0.4; filter: blur(1.5px); }
+  40%  { opacity: 0;   filter: blur(2px); }
+  100% { opacity: 0;   filter: blur(2px); }
+}
+</style>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>IZAZ'S PERSONAL WEBSITE </h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="family.html">Family</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="friends.html" class="active">Friends</a></li>
+      <li><a href="favourites.html">Favourites</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <main>
+<section id="friends-section" style="padding:20px 0;">
+  
+  <div style="
+      max-width:1000px;
+      margin:0 auto 24px;
+      padding:24px 20px;
+      background:linear-gradient(135deg,#e9d2ff,#e6f7ed);
+      border-radius:20px;
+      box-shadow:0 10px 24px rgba(0,0,0,.15);
+      text-align:center;
+      opacity:0;
+      transform:translateY(35px);
+      animation:fadeUp 0.9s ease forwards;
+  ">
+    <h2 style="margin:0;color:#4a148c;">My Friends Journey </h2>
+    <p style="margin:8px 0 0;color:#555;max-width:760px;margin-left:auto;margin-right:auto;">
+      These are the friends who brighten my everyday journey with support, laughter, and memories ><
+    </p>
+  </div>
+
+  <div style="
+      max-width:1000px;
+      margin:20px auto;
+      padding:16px;
+      background:linear-gradient(135deg,#e9d2ff,#e6f7ed);
+      border-radius:20px;
+      box-shadow:0 10px 22px rgba(0,0,0,.15);
+      opacity:0;
+      transform:translateY(85px);
+      animation:fadeUp 0.9s ease forwards 0.15s;
+  ">
+  <div class="friend-slider f1">
+    <img src="friend1a.jpg" alt="support 1">
+    <img src="friend1b.jpg" alt="support 2">
+    <img src="friend1c.jpg" alt="support 3">
+  </div>
+
+  <p style="text-align:center;margin-top:10px;font-size:1.05rem;
+            color:#4a148c;font-weight:600;">
+    my support system
+  </p>
+</div>
+
+  <div style="
+      max-width:1000px;
+      margin:20px auto;
+      padding:16px;
+      background:linear-gradient(135deg,#e9d2ff,#e6f7ed);
+      border-radius:20px;
+      box-shadow:0 10px 22px rgba(0,0,0,.15);
+      opacity:0;
+      transform:translateY(35px);
+      animation:fadeUp 0.9s ease forwards 0.3s;
+  ">
+  <div class="friend-slider f2">
+    <img src="friend2a.jpg" alt="food buddy 1">
+    <img src="friend2b.jpg" alt="food buddy 2">
+    <img src="friend2c.jpg" alt="food buddy 3">
+  </div>
+
+  <p style="text-align:center;margin-top:10px;font-size:1.05rem;
+            color:#4a148c;font-weight:600;">
+    my food hunting buddies!!
+  </p>
+</div>
+
+  <div style="
+      max-width:1000px;
+      margin:20px auto;
+      padding:16px;
+      background:linear-gradient(135deg,#e9d2ff,#e6f7ed);
+      border-radius:20px;
+      box-shadow:0 10px 22px rgba(0,0,0,.15);
+      opacity:0;
+      transform:translateY(25px);
+      animation:fadeUp 0.9s ease forwards 0.45s;
+  ">
+  <div class="friend-slider f3">
+    <img src="friend3a.jpg" alt="childhood 1">
+    <img src="friend3b.jpg" alt="childhood 2">
+    <img src="friend3c.jpg" alt="childhood 3">
+  </div>
+
+  <p style="text-align:center;margin-top:10px;font-size:1.05rem;
+            color:#4a148c;font-weight:600;">
+    one and only childhood friend
+  </p>
+</div>
+
+</section>
+<style>
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(30px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+</style>
+</main>
+
+  <footer>
+    <p>&copy; 2025 | This Website is for Educational Purposes Only | Nur I’zaz Syahmina Binti Ruziha</p>
+  </footer>
+</body>
+</html>

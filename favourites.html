@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Favourites - Izaz’s Personal Website</title>
+
+  <style>
+
+    .exp-img {
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+    .exp-img:hover {
+      transform: scale(1.08) translateY(-6px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+      filter: brightness(1.05);
+    }
+    .exp-img:active {
+      transform: scale(0.97);
+    }
+
+
+#fav-section {
+  max-width: 1100px;
+  margin: 30px auto 40px;
+  padding: 0 16px;
+}
+
+.fav-header {
+  max-width: 1000px;
+  margin: 0 auto 24px;
+  padding: 22px 20px;
+  background: linear-gradient(135deg,#e9d2ff,#e6f7ed);
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.15);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: favFadeUp 0.9s ease forwards;
+}
+
+.fav-card-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+.fav-card {
+  flex: 1 1 260px;
+  max-width: 310px;
+  background: linear-gradient(135deg,#e9d2ff,#e6f7ed);
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,.14);
+  padding: 16px 16px 18px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: favFadeUp 0.8s ease forwards;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.4s ease;
+}
+
+.fav-card:nth-child(1){ animation-delay:0.05s; }
+.fav-card:nth-child(2){ animation-delay:0.12s; }
+.fav-card:nth-child(3){ animation-delay:0.18s; }
+.fav-card:nth-child(4){ animation-delay:0.24s; }
+.fav-card:nth-child(5){ animation-delay:0.30s; }
+.fav-card:nth-child(6){ animation-delay:0.36s; }
+
+.fav-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 26px rgba(0,0,0,.20);
+}
+
+.fav-icon {
+  font-size: 1.9rem;
+  margin-bottom: 6px;
+}
+.fav-title {
+  margin: 0 0 4px;
+  color: #4a148c;
+  font-size: 1.05rem;
+}
+.fav-tag {
+  margin: 0 0 8px;
+  color: #2e7d32;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.fav-text {
+  margin: 0;
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@keyframes favFadeUp {
+  from { opacity:0; transform:translateY(25px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+    @media (max-width: 700px) {
+      .fav-card {
+        flex: 1 1 100%;
+        max-width: 500px;
+      }
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>IZAZ'S PERSONAL WEBSITE </h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="family.html">Family</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="friends.html">Friends</a></li>
+      <li><a href="favourites.html" class="active">Favourites</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="fav-section">
+
+      <div class="fav-header">
+        <h2>My Favourite Things </h2>
+        <p>Some of the little things that make me feel happy and comfortable </p>
+      </div>
+      <div class="fav-card-grid">
+
+        <article class="fav-card">
+          <div class="fav-icon">🎧</div>
+          <h3 class="fav-title">Favourite Music</h3>
+          <p class="fav-tag">Chill & late-night vibes</p>
+          <p class="fav-text">
+            I love listening to Arabic songs and sad Indonesian songs. The emotional ones are my favourite because they make everything feel more relaxing. I usually play them while driving, and the whole moment becomes even more meaningful and comforting.
+          </p>
+        </article>
+
+        <article class="fav-card">
+          <div class="fav-icon">🍿</div>
+          <h3 class="fav-title">Movies & Series</h3>
+          <p class="fav-tag">Anime</p>
+          <p class="fav-text">
+            I enjoy watchimg anime, and One Piece is my all-time favourite. It never fails to make me smile, and i love how the story keeps getting better even though its never ending haha.
+          </p>
+        </article>
+
+        <article class="fav-card">
+          <div class="fav-icon">🍵</div>
+          <h3 class="fav-title">Drinks</h3>
+          <p class="fav-tag">Matcha</p>
+          <p class="fav-text">
+            My go-to order is iced matcha latte with no sugar. I don't really enjoy sweet drinks, so the simple and creamy taste of matcha is perfect for me.
+          </p>
+        </article>
+
+        <article class="fav-card">
+          <div class="fav-icon">📚</div>
+          <h3 class="fav-title">Books & Genre</h3>
+          <p class="fav-tag">Comics & Novels</p>
+          <p class="fav-text">
+            I like simple, heartwarming stories that feel real.
+            it helps me relax and gives me a little escape from reality whenever i need a break.
+          </p>
+        </article>
+
+        <article class="fav-card">
+          <div class="fav-icon">🌷</div>
+          <h3 class="fav-title">Aesthetic</h3>
+          <p class="fav-tag">Pastel & cozy vibes</p>
+          <p class="fav-text">
+            I have been really into the colour of yellow lately because it looks bright and cute, but green will always be my comfort colour, especially in soft pastel tones. Oh, and i also really like tulips. they always lookmsimple, pretty, and calming to me.
+          </p>
+        </article>
+
+        <article class="fav-card">
+          <div class="fav-icon">💌</div>
+          <h3 class="fav-title">Quotes</h3>
+          <p class="fav-tag">Little reminders</p>
+          <p class="fav-text">
+            Sometimes i like reading random thoughts people shares online. it feels relatable and comforting, like a remimder that everyone goes through something.
+          </p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 | This Website is for Educational Purposes Only | Nur I’zaz Syahmina Binti Ruziha</p>
+  </footer>
+  
+  <script>
+  const favCards = document.querySelectorAll('.fav-card');
+
+  const hoverGradients = [
+    'linear-gradient(135deg,#f7d7ff,#ecd5ff)',
+    'linear-gradient(135deg,#d8e7ff,#e5d9ff)',
+    'linear-gradient(135deg,#dfffe9,#e0ffe1)',
+    'linear-gradient(135deg,#ffe5e5,#ffdede)',
+    'linear-gradient(135deg,#fff7d2,#fff1c9)',
+    'linear-gradient(135deg,#dff8ff,#e1f3ff)'
+  ];
+
+  favCards.forEach((card, index) => {
+    const originalBg = card.style.background;
+
+    card.addEventListener('mouseenter', () => {
+      card.style.background = hoverGradients[index];
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.background = '';
+    });
+  });
+</script>
+</body>
+</html>
